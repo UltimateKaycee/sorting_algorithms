@@ -36,7 +36,7 @@ void counting_sort(int *array, size_t size)
 	}
 	for (bim = 0; bim < size; bim++)
 	{
-		array[bim] = aux[bim];
+		array[bim] = come[bim];
 	}
 	free(come);
 	free(counter);
