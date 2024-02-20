@@ -1,29 +1,33 @@
 #include "sort.h"
+#include <stdio.h>
+
+
 /**
-  * selection_sort - Function to sort array of int.
-  * @array: Array
-  * @size: size of Array
-  */
+ * selection_sort - Function to sort array of int in ascending
+ * @array: Array
+ * @size: Size of Array
+ *
+ * Return: None
+ */
 void selection_sort(int *array, size_t size)
 {
-	size_t run, bail, take, ven;
-	int *head;
+	size_t run, go, first;
+	int ven;
 
-	if (!array || size < 2)
-		return;
-	head = array;
-	for (run = 0; run < size; run++, head++)
+	for (go = 0; go < size - 1; go++)
 	{
-		for (take = run, bail = run; bail < size; bail++)
-			if (array[bail] < array[take])
-			{
-				take = bail;
-			}
-		if (run != take)
+		first = go;
+		for (run = go + 1; run < size; run++)
 		{
-			ven = array[take];
-			array[take] = *head;
-			*head = ven;
+			if (array[run] < array[first])
+				first = run;
+		}
+
+		if (first != go)
+		{
+			ven = array[go];
+			array[go] = array[first];
+			array[first] = ven;
 			print_array(array, size);
 		}
 	}
