@@ -26,7 +26,7 @@ void check_tree(int *array, size_t size_init, size_t size, size_t i)
 		array[one] = moon;
 		print_array(array, size_init);
 	}
-	else if ((one < size) && (one < size) &&
+	else if ((one < size) && (two < size) &&
 		(side_two > side_one && side_two > array[i]))
 	{
 		moon = array[i];
