@@ -13,11 +13,12 @@
  */
 void copy(int *src, int *dst, int size)
 {
-	int run
+	int run;
 
 	for (run = 0; run < size; run++)
 		dst[run] = src[run];
 }
+
 /**
  * merge - Function to merge 2 sets of data in ascending
  * @array: first set
