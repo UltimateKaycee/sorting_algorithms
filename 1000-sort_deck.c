@@ -66,7 +66,8 @@ char get_value(deck_node_t *card)
 }
 
 /**
- * insertion_sort_deck_kind - Function to sort deck of cards from spades to diamonds.
+ * insertion_sort_deck_kind - Function to sort deck of cards from
+ * spades to diamonds.
  * @deck: Ptr to head of deck_node_t d-l list.
  */
 void insertion_sort_deck_kind(deck_node_t **deck)
